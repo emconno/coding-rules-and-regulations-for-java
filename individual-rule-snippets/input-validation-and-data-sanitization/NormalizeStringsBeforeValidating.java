@@ -2,7 +2,6 @@
  * Written by Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule IDS01-J. Normalize Strings Before Validating Them
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/IDS01-J.+Normalize+Strings+Before+Validating+Them
- * Description: This rule is about normalizing strings before validating them to prevent bypassing validation checks.
  */
 
 import java.text.Normalizer;
@@ -11,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class NormalizeStringsBeforeValidating {
+class NormalizeStringsBeforeValidating {
     
     /**
      * The main method demonstrates the importance of normalizing strings before validating them.
