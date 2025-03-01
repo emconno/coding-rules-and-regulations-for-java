@@ -13,7 +13,7 @@ class DoNotIgnoreMethodReturnValue {
      * Then, we attempt to login with invalid credentials; this time checking the return value,
      * and indicating success or failure.
      * 
-     * @param args The command line arguments (not used)
+     * @param args command-line arguments (not used)
      */
     public static void main(String[] args) {
         
