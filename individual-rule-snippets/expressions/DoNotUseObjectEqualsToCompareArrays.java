@@ -7,7 +7,7 @@
 import java.util.Arrays;
 
 
-public class DoNotUseObjectEqualsToCompareArrays {
+class DoNotUseObjectEqualsToCompareArrays {
 
     /**
      * The main method demonstrates the difference between using Object.equals() and Arrays.equals() to compare two arrays.

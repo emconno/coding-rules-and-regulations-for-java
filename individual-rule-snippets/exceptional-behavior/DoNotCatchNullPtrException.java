@@ -5,7 +5,7 @@
  */
 
 
-public class DoNotCatchNullPtrException {
+class DoNotCatchNullPtrException {
 
     /**
      * The main method demonstrates the importance of not catching NullPointerException.

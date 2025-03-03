@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 
-public class DoNotLogUnsanitizedUserInput {
+class DoNotLogUnsanitizedUserInput {
 
     /**
      * The main method demonstrates the importance of sanitized user input before logging it.
