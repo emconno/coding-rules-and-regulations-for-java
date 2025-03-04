@@ -24,19 +24,20 @@ class NormalizeStringsBeforeValidating {
         String scriptTag = "\uFE64" + "script" + "\uFE65"; // Harmful string with Unicode representation of "<script>"
 
         System.out.println("\nValidating the string before normalizing...");
+        System.out.printf("String: \"%s\"\n", scriptTag);
         validateString(scriptTag);
 
         System.out.println("\nNormalizing the string...");
         String normalizedScriptTag = Normalizer.normalize(scriptTag, Form.NFKC);
 
         System.err.println("\nValidating the normalized string...");
+        System.out.printf("String: \"%s\"\n", normalizedScriptTag);
         validateString(normalizedScriptTag);
-
     }
 
 
     /**
-     * Validates the given string to check for harmful tags.
+     * Validates the given string to check for harmful tags and prints the result to the terminal.
      * Checks for the presence of the characters '<' or '>'.
      *
      * @param s the string to validate
@@ -44,15 +45,13 @@ class NormalizeStringsBeforeValidating {
      */
     private static void validateString(String s) {
 
-        System.out.printf("String: \"%s\"\n", s );
-
         Pattern pattern = Pattern.compile("[<>]");
 
         Matcher matcher = pattern.matcher(s);
 
+        System.out.print("Validation Result: ");
         if (matcher.find()) {
-            // Found blacklisted tag
-            throw new IllegalStateException("Harmful tag found during validation!");
+            throw new IllegalStateException("Harmful tag found!");
         } 
         else {
             System.out.println("String is safe.");

@@ -11,17 +11,27 @@ public class DoNotExposeReferenceToMutableObject {
     
     private static final String[] authorizedUsernames = {"sysadmin", "databaseadmin", "productmanager"};
 
+    /**
+     * Returns a reference to the authorizedUsernames array.
+     *
+     * @return A reference to the authorizedUsernames array.
+     */
     public static final String[] vulnerableGetter() {
         return authorizedUsernames;
     }
 
+    /**
+     * Returns a clone of the authorizedUsernames array.
+     *
+     * @return A clone of the authorizedUsernames array.
+     */
     public static final String[] secureGetter() {
         return authorizedUsernames.clone();
     }
 
     
     /**
-     * The main method demonstrates the importance of only returning clones of mutable objects, instead of the references.
+     * The main method demonstrates the importance of returning clones of mutable objects instead of the references.
      * 
      * It first retrieves a clone of the authorizedUsernames array using the secureGetter method and modifies the clone.
      * It then prints the original array to show that it remains unchanged.

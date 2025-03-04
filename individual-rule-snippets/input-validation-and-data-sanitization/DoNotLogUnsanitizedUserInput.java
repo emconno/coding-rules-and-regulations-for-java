@@ -27,11 +27,11 @@ class DoNotLogUnsanitizedUserInput {
 
         Logger logger = Logger.getLogger(DoNotLogUnsanitizedUserInput.class.getName()); // initialize the logger
 
-        System.out.println("\nLogging unsanitized username...");
+        System.out.println("\nLogging unsanitized username...\n");
         logger.log(Level.SEVERE, "Login failed for {0}", username);
         
-        System.out.println("\nLogging sanitized username...");
-        logger.log(Level.SEVERE, "Login failed for {0}", sanitizeUsername(username));
+        System.out.println("\nLogging sanitized username...\n");
+        logger.log(Level.SEVERE, "Login failed for {0}\n", sanitizeUsername(username));
     }
 
     

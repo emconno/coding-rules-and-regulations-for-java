@@ -9,7 +9,7 @@ class DoNotCatchNullPtrException {
 
     /**
      * The main method demonstrates the importance of not catching NullPointerException.
-     * We use the operation of printing the length of a null username to showcase the different approaches.
+     * This program attempts to print the length of a null username to showcase the different approaches.
      * 
      * In the non-compliant approach, the program attempts to get the length of a null username,
      * which results in a NullPointerException being caught.
@@ -22,7 +22,6 @@ class DoNotCatchNullPtrException {
     public static void main(String[] args) {
 
         String username = null;
-
         
         // Non-compliant approach: Catching NullPointerException
         try {
@@ -30,7 +29,6 @@ class DoNotCatchNullPtrException {
         } catch (NullPointerException e) {
             System.out.println("Caught NullPointerException: " + e.getMessage());
         }
-
 
         // Compliant approach: Performing null check
         if (username != null) {
