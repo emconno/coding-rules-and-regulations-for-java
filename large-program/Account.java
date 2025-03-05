@@ -1,33 +1,48 @@
 
 public class Account {
 
-    //limit accessibility of fields
+    //OBJ01-J: Limit accessibility of fields
     private double balance = 0; 
-    private String fname; 
-    private String lname; 
 
-    public Account(String fnameInit, String lnameInit){
-        this.fname = fnameInit; 
-        this.lname = lnameInit;
+    public Account(double balance){
+        this.balance = balance; 
     }
 
-    public boolean withdrawal(double amount){
-        balance -= amount; 
 
-        if(balance < 0){
-            return false; 
+    private double getBalance(){
+        return this.balance; 
+    }
+
+    private void deposit(double amount){
+        if(amount > 0){
+            balance += amount;
         }
-        return true;
     }
 
-    public boolean deposit(double amount){
-        balance += amount; 
-
-        if(balance < 0){
-            return false; 
+    private void withdraw(double amount){
+        if(amount > 0 && balance >= amount){
+            balance -= amount;
+        }
+    }
+    
+    //OBJ08-J: Do not expose private members of an outer class from within a nested class.
+    public class Transaction{
+        public void processDeposit(double amount){
+            deposit(amount);
         }
 
-        return true;
+        public void processWithdrawal(double amount){
+            withdraw(amount);
+        }
+
+        public double checkBalance(){
+            return getBalance();
+        }
     }
+
+    
+
+
+    
 
 }
