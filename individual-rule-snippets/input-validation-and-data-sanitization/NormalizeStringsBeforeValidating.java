@@ -1,5 +1,5 @@
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule IDS01-J. Normalize Strings Before Validating Them
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/IDS01-J.+Normalize+Strings+Before+Validating+Them
  */

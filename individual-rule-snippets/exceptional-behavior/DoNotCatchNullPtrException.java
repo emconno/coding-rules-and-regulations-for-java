@@ -1,5 +1,5 @@
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule ERR08-J. Do not catch NullPointerException or any of its ancestors
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors
  */

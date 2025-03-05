@@ -1,5 +1,5 @@
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule EXP00-J. Do not ignore values returned by methods
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/EXP00-J.+Do+not+ignore+values+returned+by+methods
  */

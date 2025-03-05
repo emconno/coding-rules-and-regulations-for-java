@@ -1,14 +1,14 @@
-
-import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule ERR02-J. Prevent exceptions while logging data
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/ERR02-J.+Prevent+exceptions+while+logging+data
  */
+
+ import java.io.IOException;
+ import java.util.logging.FileHandler;
+ import java.util.logging.Logger;
+ import java.util.logging.SimpleFormatter;
+
 
 class PreventExceptionsWhileLogging {
 

@@ -1,5 +1,5 @@
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Rule EXP02-J. Do not use the Object.equals() method to compare two arrays
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/EXP02-J.+Do+not+use+the+Object.equals%28%29+method+to+compare+two+arrays
  */

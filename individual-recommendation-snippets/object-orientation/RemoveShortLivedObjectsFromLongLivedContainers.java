@@ -1,5 +1,5 @@
 /**
- * Written by Dan Rascop
+ * @author Dan Rascop
  * Program demonstrating the SEI CERT Oracle Coding Standard for Java - Recommendation OBJ55-J. Remove short-lived objects from long-lived container objects
  * Reference: https://wiki.sei.cmu.edu/confluence/display/java/OBJ55-J.+Remove+short-lived+objects+from+long-lived+container+objects
  */
