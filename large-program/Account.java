@@ -1,15 +1,21 @@
 
-public class Account {
+public class Account implements Cloneable{
 
     //OBJ01-J: Limit accessibility of fields
     private double balance = 0; 
     private StringBuilder fname; 
     private StringBuilder lname; 
 
-    public Account(double balance, String fname, String lname){
+    public Account(double balance, StringBuilder fname, StringBuilder lname){
         this.balance = balance; 
         this.fname = new StringBuilder(fname);
         this.lname = new StringBuilder(lname);
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        final Account clone = (Account) super.clone();
+        clone.outputBalance();
+        return clone;
     }
 
     //OBJ04-J: Provide mutable classes with copy functionality to safely allow passing instances to untrusted code
@@ -22,18 +28,23 @@ public class Account {
         this.lname = new StringBuilder(acct.getLName().toString());
     }
 
+    //MET06-J: Do not invoke overridable methods in clone (add final to superclass method declarations)
+    public final void outputBalance(){
+        System.out.println("Balance: " + this.balance);
+    }
 
-    private double getBalance(){
+
+    private final double getBalance(){
         return this.balance; 
     }
 
-    private void deposit(double amount){
+    private final void deposit(double amount){
         if(amount > 0){
             balance += amount;
         }
     }
 
-    private void withdraw(double amount){
+    private final void withdraw(double amount){
         if(amount > 0 && balance >= amount){
             balance -= amount;
         }
