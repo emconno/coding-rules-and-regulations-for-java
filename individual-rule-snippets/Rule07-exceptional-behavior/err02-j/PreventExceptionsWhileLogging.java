@@ -27,7 +27,7 @@ class PreventExceptionsWhileLogging {
 
         try {  
             // Configure the LogFile
-            fh = new FileHandler("./individual-rule-snippets/exceptional-behavior/LogFile.log"); // open the file 
+            fh = new FileHandler("./individual-rule-snippets/Rule07-exceptional-behavior/err02-j/LogFile.log"); // open the file 
             logger.addHandler(fh); // set logger to write to LogFile
             SimpleFormatter formatter = new SimpleFormatter();  
             fh.setFormatter(formatter);  
