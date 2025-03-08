@@ -51,7 +51,8 @@ public class Account implements Cloneable{
     }
     
     //OBJ08-J: Do not expose private members of an outer class from within a nested class.
-    public class Transaction{
+    //OBJ07-J: Sensitive classes must not let themselves be copied
+    final class Transaction{
         public void processDeposit(double amount){
             deposit(amount);
         }
