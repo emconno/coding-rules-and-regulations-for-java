@@ -1,3 +1,7 @@
+/**
+ * The Main class of our large program. Here, some of the functionality of the account classes are tested
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -59,7 +63,8 @@ public class Main {
         System.out.println("Testing if 'myAccount' is a taxed account: " + isTaxedAccount(myAccount));
         System.out.println("Testing if 'myTaxedAccount' is a taxed account: " + isTaxedAccount(myTaxedAccount));
 
-        ArrayList<Account> fileAccounts = createAccountsFromFile("..\\large-program\\Account.txt");
+        //may need to change filepath to "..\\large-program\\Account.txt" for linux?
+        ArrayList<Account> fileAccounts = createAccountsFromFile("large-program\\Account.txt");
         
         for (int i = 0; i < fileAccounts.size(); i++) {
             Account acc = fileAccounts.get(i);
