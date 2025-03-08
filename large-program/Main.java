@@ -63,6 +63,7 @@ public class Main {
         System.out.println("Testing if 'myAccount' is a taxed account: " + isTaxedAccount(myAccount));
         System.out.println("Testing if 'myTaxedAccount' is a taxed account: " + isTaxedAccount(myTaxedAccount));
 
+        //may need to change filepath to "..\\large-program\\Account.txt" for linux?
         ArrayList<Account> fileAccounts = createAccountsFromFile("large-program\\Account.txt");
         
         for (int i = 0; i < fileAccounts.size(); i++) {
