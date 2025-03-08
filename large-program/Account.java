@@ -71,6 +71,7 @@ public class Account implements Cloneable{
         return new StringBuilder(this.fname);
     }
 
+    // OBJ13-J: Ensure that references to mutable objects are not exposed
     public StringBuilder getLName(){
         return new StringBuilder(this.lname);
     }
