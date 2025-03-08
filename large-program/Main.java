@@ -1,9 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.ArrayBlockingQueue;
 
 public class Main {
 
@@ -19,7 +17,11 @@ public class Main {
         return myAccount.getClass() == taxed.getClass();
     }
 
-
+    /**
+     * Method to determine if an account is a TaxedAccount
+     * @param   myAccount
+     * @return  a boolean stating whether the account is a TaxedAccount
+     */
     public static ArrayList<Account> createAccountsFromFile(String filename) {
         ArrayList<Account> newAccounts = new ArrayList<>();
         try {
@@ -31,7 +33,8 @@ public class Main {
                 newAccounts.add(new Account(Double.parseDouble(vals[0]), new StringBuilder(vals[1]), new StringBuilder(vals[2])));
             }
             reader.close();
-
+        
+        //FIO02-J: Detect and handle file related errors
         } catch (FileNotFoundException e) {
             System.out.println("ERROR");
             e.printStackTrace();
@@ -41,6 +44,11 @@ public class Main {
         return newAccounts;
     }
 
+
+    /**
+     * Main method to test functionality of Account classes
+     * @param args
+     */
     public static void main(String[] args) {
         StringBuilder fname = new StringBuilder("John");
         StringBuilder lname = new StringBuilder("Doe");
@@ -55,7 +63,7 @@ public class Main {
         
         for (int i = 0; i < fileAccounts.size(); i++) {
             Account acc = fileAccounts.get(i);
-            System.out.println("New Account " + i + ": " + acc.getFName() + " " + acc.getLName());
+            System.out.println("New Account from Account.txt: " + acc.getFName() + " " + acc.getLName());
         }
 
 
