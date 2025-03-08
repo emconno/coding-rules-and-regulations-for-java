@@ -24,6 +24,7 @@ public class InputHandler {
 
     /**
      * Closes the scanner.
+     * FIO14-J: Perform proper cleanup at program termination
      */
     public void closeScanner() {
         if (scanner != null) {
@@ -193,8 +194,10 @@ public class InputHandler {
     private boolean validateUsername(String input) {
 
         // Check for special characters in the input
+        //MET00-J: Validate method arguments
         Pattern harmfulPattern = Pattern.compile("[<>\"'%;()&+]");
         Matcher matcher = harmfulPattern.matcher(input);
+        //MET01-J: Never use assertions to validate method arguments
         if (matcher.find()) {
             return false;
         }
